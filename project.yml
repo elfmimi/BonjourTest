@@ -1,0 +1,69 @@
+name: BonjourTest
+
+options:
+  bundleIdPrefix: com.bonjourtest
+  deploymentTarget:
+    macOS: "14.0"
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  Bonjour-macOS:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Shared/Sources
+        group: Shared
+      - path: Bonjour-macOS/Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bonjourtest.macos
+        PRODUCT_NAME: BonjourTest
+        CODE_SIGN_ENTITLEMENTS: Bonjour-macOS/Bonjour-macOS.entitlements
+        ENABLE_HARDENED_RUNTIME: true
+    info:
+      path: Bonjour-macOS/Info.plist
+      properties:
+        CFBundleDisplayName: BonjourTest
+        LSApplicationCategoryType: public.app-category.utilities
+        NSLocalNetworkUsageDescription: >
+          BonjourTest uses your local network to discover and connect to other
+          BonjourTest devices for this demo.
+        NSBonjourServices:
+          - _bonjourtest._tcp
+
+  Bonjour-iOS:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Shared/Sources
+        group: Shared
+      - path: Bonjour-iOS/Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bonjourtest.ios
+        PRODUCT_NAME: BonjourTest
+        TARGETED_DEVICE_FAMILY: "1,2"
+    info:
+      path: Bonjour-iOS/Info.plist
+      properties:
+        CFBundleDisplayName: BonjourTest
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSLocalNetworkUsageDescription: >
+          BonjourTest uses your local network to discover and connect to other
+          BonjourTest devices for this demo.
+        NSBonjourServices:
+          - _bonjourtest._tcp
+
+schemes: {}
