@@ -30,7 +30,7 @@
 		8143CA581674104F08C27C25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9A536BFBD725ECEDE75EBA4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1AB97094F4C5CB277533A6F /* Bonjour-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Bonjour-macOS.app"; path = BonjourTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD08246675198A116A2870E2 /* Bonjour-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; name = "Bonjour-iOS.app"; path = BonjourTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD08246675198A116A2870E2 /* BonjourTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonjourTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F260EB553386677A8D0341F8 /* MessageFramer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFramer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +74,7 @@
 		AF705818D4F4E59B36DDA08D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD08246675198A116A2870E2 /* Bonjour-iOS.app */,
+				DD08246675198A116A2870E2 /* BonjourTest.app */,
 				B1AB97094F4C5CB277533A6F /* Bonjour-macOS.app */,
 			);
 			name = Products;
@@ -124,7 +124,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Bonjour-iOS";
-			productReference = DD08246675198A116A2870E2 /* Bonjour-iOS.app */;
+			productReference = DD08246675198A116A2870E2 /* BonjourTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DB815F5586953B0833F837E2 /* Bonjour-macOS */ = {
@@ -381,7 +381,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonjourtest.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam-$(DEVELOPMENT_TEAM).bonjourtest.ios";
 				PRODUCT_NAME = BonjourTest;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,7 +399,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonjourtest.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam-$(DEVELOPMENT_TEAM).bonjourtest.ios";
 				PRODUCT_NAME = BonjourTest;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
